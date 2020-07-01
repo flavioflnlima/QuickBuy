@@ -32,6 +32,8 @@ namespace QuickBuy.Dominio.Entidades
                 AddCritica("Pedido deve conter ao menos um item");
             if (string.IsNullOrEmpty(CEP))
                 AddCritica("CEP não pode estar vazio");
+            if (FormaPagamentoId == 0)
+                AddCritica("Informe uma forma de pagamento");
         }
     }
 }
